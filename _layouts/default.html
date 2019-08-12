@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% comment %}
+	Set the page language to the `site.language` configuration
+	or default to "en-GB" – sensible for most FT sites
+{% endcomment %}
+<html
+	lang="{% if site.language %}{{site.language}}{% else %}en-GB{% endif %}"
+	class="core o-typography--loading-sans o-typography--loading-sansBold o-typography--loading-display o-typography--loading-displayBold"
+	data-o-component="o-typography"
+>
+<head>
+
+	{% comment %}
+		Define some page meta information
+	{% endcomment %}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{{page.title}}</title>
+
+	{% comment %}
+		Support `description` front-matter for pages
+	{% endcomment %}
+	{% if page.description %}
+		<meta name="description" content="{{page.description}}" />
+	{% endif %}
+
+	{% comment %}
+		Import cuts-the-mustard test, icons, styles, and scripts.
+		These are imported as partials so that they can be
+		individually overridden by another site
+	{% endcomment %}
+	{% include layout/cuts-the-mustard.html %}
+	{% include layout/favicons.html %}
+	{% include layout/styles.html %}
+	{% include layout/scripts.html %}
+
+	{% comment %}
+		Sitemap and canonical URL links
+	{% endcomment %}
+	<link rel="sitemap" type="application/xml" href="{{'/sitemap.xml' | absolute_url}}" title="Sitemap" />
+	<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}" />
+
+	{% comment %}
+		Empty template used to specify additional content for
+		the page head
+	{% endcomment %}
+	{% include layout/head.html %}
+
+</head>
+<body>
+
+	{% capture _o_layout_type -%}
+		{%- if layout._o_layout_type -%}
+			o-layout--{{layout._o_layout_type}}
+		{%- else -%}
+			o-layout--docs
+		{%- endif -%}
+	{%- endcapture %}
+
+	<div
+		class="o-layout {{_o_layout_type}}"
+		data-o-component="o-layout"
+		{% if page.sidebar_include != nil or page.sidebar_html != nil %}
+			data-o-layout-construct-nav="false"
+		{% endif %}
+	>
+
+		<div class="o-layout__header">{% include header.html %}</div>
+
+		{{content}}
+
+		<div class="o-layout__footer">{% include footer.html %}</div>
+
+	</div>
+
+</body>
+</html>

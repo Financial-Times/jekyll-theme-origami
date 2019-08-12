@@ -1,0 +1,41 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+	/* Hide any enhanced experience content when in core mode, and vice versa. */
+	.core .o--if-js,
+	.enhanced .o--if-no-js {
+		display: none !important;
+	}
+</style>
+<link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-typography@^5.8.0,o-layout@^3.2.0,o-header-services@^3.2.9,o-footer-services@^2.0.3,o-syntax-highlight@^1.4.0,o-message@^3.1.0,o-table@^6.9.0,o-labels@^4.2.2,o-buttons@^5.16.6&brand=internal" />
+
+{% comment %}
+	Output styles for the customised site logo if defined
+{% endcomment %}
+{% if site.logo or page.hero_image %}
+
+	{% comment %}
+		Get the site's system code for use in Image Service URLs,
+		defaulting to the Jekyll theme name
+	{% endcomment %}
+	{% if site.system_code %}
+		{% assign image_source = site.system_code | url_encode %}
+	{% else %}
+		{% assign image_source = 'jekyll-theme-origami' %}
+	{% endif %}
+
+	<style>
+		{% if site.logo %}
+			.o-header-services__logo {
+				background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/{{site.logo | url_encode}}?format=png&source={{image_source}}&width=55');
+				background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/{{site.logo | url_encode}}?format=svg&source={{image_source}}&width=55');
+			}
+		{% endif %}
+		{% if page.hero_image %}
+			.o-layout__hero:before{
+				background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/{{page.hero_image | url_encode}}?source={{image_source}}&quality=highest&width=1600&height=400&dpr=2&gravity=poi');
+			}
+		{% endif %}
+	</style>
+
+{% endif %}

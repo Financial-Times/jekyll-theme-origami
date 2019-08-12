@@ -1,0 +1,11 @@
+system_code: origami
+name: Origami Jekyll Demo
+tagline: It's a demo website
+logo: ftlogo-v1:origami
+favicon: ftlogo-v1:brand-ft-logo-square
+language: en-GB
+slack:
+  url: https://app.slack.com/client/T025C95MN/C02FU5ARJ
+  channel_name: ft-origami
+github:
+  repository_url: https://github.com/Financial-Times/origami

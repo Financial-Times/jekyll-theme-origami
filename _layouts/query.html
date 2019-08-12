@@ -1,0 +1,34 @@
+---
+layout: default
+_o_layout_type: query
+---
+
+<div class="o-layout__heading o-layout-typography">
+	{% if page.heading_html != nil %}
+		{{page.heading_html}}
+	{% elsif page.heading_include != nil %}
+		{% include {{page.heading_include}}.html %}
+	{% endif %}
+</div>
+
+<div class="o-layout__query-sidebar o-layout-typography">
+	{% if page.sidebar_html != nil %}
+		{{page.sidebar_html}}
+	{% elsif page.sidebar_include != nil %}
+		{% include {{page.sidebar_include}}.html %}
+	{% endif %}
+</div>
+
+<div class="o-layout__main o-layout-typography">
+	{{content}}
+</div>
+
+{% if page.sidebar_aside_include != nil or page.sidebar_aside_html != nil %}
+	<div class="o-layout__aside-sidebar o-layout-typography">
+		{% if page.sidebar_aside_html != nil %}
+			{{page.sidebar_aside_html}}
+		{% elsif page.sidebar_aside_include != nil %}
+			{% include {{page.sidebar_aside_include}}.html %}
+		{% endif %}
+	</div>
+{% endif %}

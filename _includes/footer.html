@@ -1,0 +1,36 @@
+
+<footer class="o-footer-services">
+	<div class="o-footer-services__container">
+		<div class="o-footer-services__wrapper o-footer-services__wrapper--top">
+
+			{% if site.github.repository_url %}
+				<a class="o-footer-services__icon-link o-footer-services__icon-link--github" href="{{site.github.repository_url}}">
+					View project on GitHub
+				</a>
+			{% endif %}
+
+			{% if site.slack %}
+				<a class="o-footer-services__icon-link o-footer-services__icon-link--slack" href="{{site.slack.url}}">
+					#{{site.slack.channel_name}}
+				</a>
+			{% endif %}
+
+			{%- comment -%}
+				TODO work out how we include the freeform section here
+			{%- endcomment -%}
+
+		</div>
+	</div>
+	<div class="o-footer-services__container">
+		<div class="o-footer-services__wrapper o-footer-services__wrapper--legal">
+			<div class="o-footer-services__links">
+				<a href="http://help.ft.com/help/legal-privacy/cookies/">Cookies</a>
+				<a href="http://help.ft.com/help/legal-privacy/copyright/copyright-policy/">Copyright</a>
+				<a href="http://help.ft.com/help/legal-privacy/privacy/">Privacy</a>
+				<a href="http://help.ft.com/help/legal-privacy/terms-conditions">Terms &amp; Conditions</a>
+			</div>
+			<p><span>&#xA9; THE FINANCIAL TIMES LTD 2019.</span> FT and &apos;Financial Times&apos; are trademarks of
+				The Financial Times Ltd.</p>
+		</div>
+	</div>
+</footer>

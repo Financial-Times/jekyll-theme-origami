@@ -1,0 +1,16 @@
+---
+layout: default
+_o_layout_type: docs
+---
+
+<div class="o-layout__sidebar o-layout-typography">
+	{% if page.sidebar_html != nil %}
+		{{page.sidebar_html}}
+	{% elsif page.sidebar_include != nil %}
+		{% include {{page.sidebar_include}}.html %}
+	{% endif %}
+</div>
+
+<div class="o-layout__main o-layout-typography">
+	{{content}}
+</div>
