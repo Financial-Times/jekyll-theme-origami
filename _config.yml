@@ -1,0 +1,7 @@
+
+# The default language for sites that use this theme, this
+# is set in the html `lang` attribute
+language: en-GB
+
+# The default system code, used mostly in Image Service requests
+system_code: jekyll-theme-origami

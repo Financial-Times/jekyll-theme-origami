@@ -1,13 +1,5 @@
 <!DOCTYPE html>
-{% comment %}
-	Set the page language to the `site.language` configuration
-	or default to "en-GB" – sensible for most FT sites
-{% endcomment %}
-<html
-	lang="{% if site.language %}{{site.language}}{% else %}en-GB{% endif %}"
-	class="core o-typography--loading-sans o-typography--loading-sansBold o-typography--loading-display o-typography--loading-displayBold"
-	data-o-component="o-typography"
->
+<html lang="{{site.language}}" class="core o-typography--loading-sans o-typography--loading-sansBold o-typography--loading-display o-typography--loading-displayBold" data-o-component="o-typography">
 <head>
 
 	{% comment %}
