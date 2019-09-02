@@ -1,11 +1,10 @@
 ---
 title: Origami Jekyll Demo
 permalink: /
-layout: landing
-hero_image: ftcms:c5562daa-2a79-11e9-88a4-c32129756dd8
-hero_html: |
-  <h1>Origami Jekyll Demo</h1>
-  <p>A series of demo pages used to test the Origami Jekyll theme.</p>
+layout: origami-theme-landing
+hero:
+  content_include: demo/home-hero.html
+  image_url: https://www.ft.com/__origami/service/image/v2/images/raw/ftcms:c5562daa-2a79-11e9-88a4-c32129756dd8?source=jekyll-theme-origami
 ---
 
 ## Available Layouts

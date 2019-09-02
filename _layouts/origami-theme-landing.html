@@ -1,0 +1,37 @@
+---
+layout: origami-theme-default
+_o_layout_type: landing
+---
+
+{% comment %}
+	If we have a hero configured for this landing page, we
+	output the required markup for this
+{% endcomment %}
+{% if page.hero %}
+	<div
+		class="
+			o-layout__hero
+			o-layout-typography
+
+			{% comment %}
+				Muted hero modifier class
+			{% endcomment %}
+			{% if page.hero.is_muted %}o-layout__hero--muted{% endif %}
+
+			{% comment %}
+				Any extra classes required
+			{% endcomment %}
+			{{page.hero.extra_classes}}
+		">
+		{% if page.hero.content_include %}
+			{% include {{page.hero.content_include}} %}
+		{% endif %}
+	</div>
+{% endif %}
+
+{% comment %}
+	Wrap the content in the o-layout main and typography markup
+{% endcomment %}
+<div class="o-layout__main o-layout-typography">
+	{{content}}
+</div>

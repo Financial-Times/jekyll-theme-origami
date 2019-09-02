@@ -71,10 +71,11 @@ gem 'jekyll-theme-origami', git: 'https://github.com/Financial-Times/jekyll-them
 Landing Layout frontmatter example:
 
 ```yaml
-hero_include: include-name
-hero_html: |
-  <h1>Some HTML</h1>
-hero_muted: false
+hero:
+  content_include: demo/hero.html
+  is_muted: false
+  extra_classes: this-is-a-class
+  image_url: image.jpg
 ```
 
 Documentation Layout frontmatter example:
@@ -98,3 +99,8 @@ sidebar_aside_include: include-name
 sidebar_aside_html: |
   <h1>Some HTML</h1>
 ```
+
+## Changes?
+
+  - Prefix layouts (and maybe some partials) with `origami-theme-`?
+  - Convention of using `-override`. Example: `_includes/origami-theme-navigation`, used by `_includes/origami-theme-navgation-override`

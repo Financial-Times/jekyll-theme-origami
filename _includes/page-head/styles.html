@@ -13,23 +13,17 @@
 	Output styles for the customised site logo
 	and/or hero image if defined
 {% endcomment %}
-{% if site.logo or page.hero_image %}
-
-	{% comment %}
-		Get the site's system code for use in Image Service URLs
-	{% endcomment %}
-	{% assign system_code = site.system_code | url_encode %}
+{% if site.logo or (page.hero and page.hero.image_url) %}
 
 	<style>
 		{% if site.logo %}
 			.o-header-services__logo {
-				background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/{{site.logo | url_encode}}?format=png&source={{system_code}}&width=55');
-				background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/{{site.logo | url_encode}}?format=svg&source={{system_code}}&width=55');
+				background-image: url('{{site.logo}}');
 			}
 		{% endif %}
-		{% if page.hero_image %}
+		{% if page.hero and page.hero.image_url %}
 			.o-layout__hero:before{
-				background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/{{page.hero_image | url_encode}}?source={{system_code}}&quality=highest&width=1600&height=400&dpr=2&gravity=poi');
+				background-image: url('{{page.hero.image_url}}');
 			}
 		{% endif %}
 	</style>
