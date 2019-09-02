@@ -1,14 +1,17 @@
 
 {% comment %}
-	Get the site's favicon and system code
+	Get the site's favicon
 {% endcomment %}
-{% assign favicon = site.favicon | url_encode %}
-{% assign system_code = site.system_code | url_encode %}
+{% if site.data.origami-theme.favicon %}
+	{% assign favicon = site.data.origami-theme.favicon | url_encode %}
+{% else %}
+	{% assign favicon = 'ftlogo-v1:brand-ft-logo-square' %}
+{% endif %}
 
-<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source={{system_code}}&width=16&height=16&format=png" sizes="16x16">
-<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source={{system_code}}&width=32&height=32&format=png" sizes="32x32">
-<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source={{system_code}}&width=96&height=96&format=png" sizes="96x96">
-<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source={{system_code}}&width=128&height=128&format=png" sizes="128x128">
-<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source={{system_code}}&width=196&height=196&format=png" sizes="196x196">
-<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source={{system_code}}&width=310&height=310&format=png" sizes="310x310">
-<link rel="icon" type="image/svg+xml" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source={{system_code}}&format=svg" sizes="any">
+<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source=jekyll-theme-origami&width=16&height=16&format=png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source=jekyll-theme-origami&width=32&height=32&format=png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source=jekyll-theme-origami&width=96&height=96&format=png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source=jekyll-theme-origami&width=128&height=128&format=png" sizes="128x128">
+<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source=jekyll-theme-origami&width=196&height=196&format=png" sizes="196x196">
+<link rel="icon" type="image/png" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source=jekyll-theme-origami&width=310&height=310&format=png" sizes="310x310">
+<link rel="icon" type="image/svg+xml" href="https://www.ft.com/__origami/service/image/v2/images/raw/{{favicon}}?source=jekyll-theme-origami&format=svg" sizes="any">

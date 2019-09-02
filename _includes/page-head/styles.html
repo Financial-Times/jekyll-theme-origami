@@ -13,12 +13,12 @@
 	Output styles for the customised site logo
 	and/or hero image if defined
 {% endcomment %}
-{% if site.logo or (page.hero and page.hero.image_url) %}
+{% if site.data.origami-theme.logo or (page.hero and page.hero.image_url) %}
 
 	<style>
-		{% if site.logo %}
+		{% if site.data.origami-theme.logo %}
 			.o-header-services__logo {
-				background-image: url('{{site.logo}}');
+				background-image: url('{{site.data.origami-theme.logo}}');
 			}
 		{% endif %}
 		{% if page.hero and page.hero.image_url %}

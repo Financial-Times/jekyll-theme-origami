@@ -1,5 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{site.language}}" class="core o-typography--loading-sans o-typography--loading-sansBold o-typography--loading-display o-typography--loading-displayBold" data-o-component="o-typography">
+<html
+	lang="
+		{%- if site.data.origami-theme.language -%}
+			{{site.data.origami-theme.language}}
+		{%- else -%}
+			en-GB
+		{%- endif -%}
+	"
+	class="core o-typography--loading-sans o-typography--loading-sansBold o-typography--loading-display o-typography--loading-displayBold"
+	data-o-component="o-typography"
+>
 <head>
 
 	{% comment %}
@@ -57,11 +67,11 @@
 		{% endif %}
 	>
 
-		<div class="o-layout__header">{% include header.html %}</div>
+		<div class="o-layout__header">{% include origami-theme-header.html %}</div>
 
 		{{content}}
 
-		<div class="o-layout__footer">{% include footer.html %}</div>
+		<div class="o-layout__footer">{% include origami-theme-footer.html %}</div>
 
 	</div>
 

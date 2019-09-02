@@ -9,9 +9,9 @@
 				</a>
 			{% endif %}
 
-			{% if site.slack %}
-				<a class="o-footer-services__icon-link o-footer-services__icon-link--slack" href="{{site.slack.url}}">
-					#{{site.slack.channel_name}}
+			{% if site.data.origami-theme.slack %}
+				<a class="o-footer-services__icon-link o-footer-services__icon-link--slack" href="{{site.data.origami-theme.slack.channel_url}}">
+					#{{site.data.origami-theme.slack.channel_name}}
 				</a>
 			{% endif %}
 

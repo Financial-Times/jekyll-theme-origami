@@ -9,20 +9,20 @@
 		<a href="{{'/' | absolute_url}}" class="o-header-services__logo">
 			<span class="o-header-services__visually-hidden">Home page</span>
 		</a>
-		{% if site.name or site.github.project_title %}
-			<div class="o-header-services__title">
-				<a class="o-header-services__product-name" href="{{'/' | absolute_url}}">
-					{%- if site.name -%}
-						{{site.name}}
-					{%- elsif site.github.project_title -%}
-						{{site.github.project_title}}
-					{%- endif -%}
-				</a>
-				{% if site.tagline %}
-					<span class="o-header-services__product-tagline">{{site.tagline}}</span>
-				{% endif %}
-			</div>
-		{% endif %}
+		<div class="o-header-services__title">
+			<a class="o-header-services__product-name" href="{{'/' | absolute_url}}">
+				{%- if site.data.origami-theme.name -%}
+					{{site.data.origami-theme.name}}
+				{%- elsif site.github.project_title -%}
+					{{site.github.project_title}}
+				{%- else -%}
+					Website Name
+				{%- endif -%}
+			</a>
+			{% if site.data.origami-theme.tagline %}
+				<span class="o-header-services__product-tagline">{{site.data.origami-theme.tagline}}</span>
+			{% endif %}
+		</div>
 	</div>
 	{% include navigation.html %}
 </header>

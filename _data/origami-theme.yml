@@ -1,0 +1,17 @@
+
+# The language for sites that use this theme, this
+# is set in the html `lang` attribute
+language: en-GB
+
+# General website information, e.g. name, tagline, and logo
+name: Jekyll Theme Origami
+tagline: Demo Website
+logo: https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1:origami?format=svg&source=jekyll-theme-origami
+
+# Slack details
+slack:
+  channel_url: https://app.slack.com/client/T025C95MN/C02FU5ARJ
+  channel_name: ft-origami
+
+# Site favicon, must be a live image as it's run through the Image Service
+favicon: ftlogo-v1:origami
