@@ -1,0 +1,41 @@
+---
+layout: origami-theme-default
+_o_layout_type: query
+---
+
+<div
+	class="
+		o-layout__heading
+		o-layout-typography
+		{{page.heading.extra_classes}}
+	">
+	{% if page.heading and page.heading.content_include %}
+		{% include {{page.heading.content_include}} %}
+	{% endif %}
+</div>
+
+<div
+	class="
+		o-layout__query-sidebar
+		o-layout-typography
+		{{page.sidebar.extra_classes}}
+	">
+	{% if page.sidebar and page.sidebar.content_include %}
+		{% include {{page.sidebar.content_include}} %}
+	{% endif %}
+</div>
+
+<div class="o-layout__main o-layout-typography">
+	{{content}}
+</div>
+
+{% if page.aside and page.aside.content_include %}
+	<div
+		class="
+			o-layout__aside-sidebar
+			o-layout-typography
+			{{page.aside.extra_classes}}
+		">
+		{% include {{page.aside.content_include}} %}
+	</div>
+{% endif %}

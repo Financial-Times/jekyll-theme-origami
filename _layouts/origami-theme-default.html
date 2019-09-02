@@ -52,7 +52,7 @@
 	<div
 		class="o-layout {{_o_layout_type}}"
 		data-o-component="o-layout"
-		{% if page.sidebar_include != nil or page.sidebar_html != nil %}
+		{% if page.sidebar.content_include %}
 			data-o-layout-construct-nav="false"
 		{% endif %}
 	>

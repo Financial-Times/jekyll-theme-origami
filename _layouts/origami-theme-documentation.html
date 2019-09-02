@@ -1,0 +1,19 @@
+---
+layout: origami-theme-default
+_o_layout_type: docs
+---
+
+<div
+	class="
+		o-layout__sidebar
+		o-layout-typography
+		{{page.sidebar.extra_classes}}
+	">
+	{% if page.sidebar and page.sidebar.content_include %}
+		{% include {{page.sidebar.content_include}} %}
+	{% endif %}
+</div>
+
+<div class="o-layout__main o-layout-typography">
+	{{content}}
+</div>

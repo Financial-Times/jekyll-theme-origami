@@ -72,32 +72,32 @@ Landing Layout frontmatter example:
 
 ```yaml
 hero:
-  content_include: demo/hero.html
+  content_include: example.html
   is_muted: false
-  extra_classes: this-is-a-class
-  image_url: image.jpg
+  extra_classes: example-class
+  image_url: example.jpg
 ```
 
 Documentation Layout frontmatter example:
 
 ```yaml
-sidebar_include: include-name
-sidebar_html: |
-  <h1>Some HTML</h1>
+sidebar:
+  content_include: example.html
+  extra_classes: example-class
 ```
 
 Query Layout frontmatter example:
 
 ```yaml
-heading_include: include-name
-heading_html: |
-  <h1>Some HTML</h1>
-sidebar_include: include-name
-sidebar_html: |
-  <h1>Some HTML</h1>
-sidebar_aside_include: include-name
-sidebar_aside_html: |
-  <h1>Some HTML</h1>
+heading:
+  content_include: example.html
+  extra_classes: example-class
+sidebar:
+  content_include: example.html
+  extra_classes: example-class
+aside:
+  content_include: example.html
+  extra_classes: example-class
 ```
 
 ## Changes?

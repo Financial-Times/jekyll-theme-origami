@@ -3,7 +3,7 @@ title: Landing Layout (muted) - Origami Jekyll Demo
 permalink: /landing/muted/
 layout: origami-theme-landing
 hero:
-  content_include: demo/hero.html
+  content_include: demo/hero-landing.html
   is_muted: true
 ---
 
