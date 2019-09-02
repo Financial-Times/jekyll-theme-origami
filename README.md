@@ -60,3 +60,10 @@ slack:
 theme: jekyll-theme-origami # Local development
 remote_theme: Financial-Times/jekyll-theme-origami # GitHub pages
 ```
+
+Example Gemfile:
+
+```ruby
+gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll-theme-origami', git: 'https://github.com/Financial-Times/jekyll-theme-origami.git'
+```
