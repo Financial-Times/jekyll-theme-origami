@@ -5,3 +5,7 @@ language: en-GB
 
 # The default system code, used mostly in Image Service requests
 system_code: jekyll-theme-origami
+
+# The default website name. This is set to remind people to override
+# it, and also to provide a default for the demo
+name: Demo Website

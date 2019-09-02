@@ -40,3 +40,23 @@ I came up with this list of requirements for page types, based on the Origami an
       - **Requirement:** RHS sidebar must be optional
 
 I've managed to do all of these except the navigation so far, which will be more work I think.
+
+## Configuration (WIP)
+
+Site-wide config example:
+
+```yaml
+system_code: origami
+name: Origami Jekyll Demo
+tagline: It's a demo website
+logo: ftlogo-v1:origami
+favicon: ftlogo-v1:origami
+language: en-GB
+slack:
+  url: https://app.slack.com/client/T025C95MN/C02FU5ARJ
+  channel_name: ft-origami
+
+# Set the theme!
+theme: jekyll-theme-origami # Local development
+remote_theme: Financial-Times/jekyll-theme-origami # GitHub pages
+```

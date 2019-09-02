@@ -17,7 +17,7 @@ hero_html: |
 			<p>A layout used for landing pages and index pages.</p>
 		</div>
 		<div class="o-layout-item__footer">
-			<a href="/landing/" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
+			<a href="{{'/landing/' | absolute_url}}" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
 				View the demo
 			</a>
 		</div>
@@ -28,7 +28,7 @@ hero_html: |
 			<p>A landing layout but with a less prominent hero.</p>
 		</div>
 		<div class="o-layout-item__footer">
-			<a href="/landing/muted/" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
+			<a href="{{'/landing/muted/' | absolute_url}}" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
 				View the demo
 			</a>
 		</div>
@@ -39,7 +39,7 @@ hero_html: |
 			<p>A layout used for documentation and long-form content.</p>
 		</div>
 		<div class="o-layout-item__footer">
-			<a href="/docs/" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
+			<a href="{{'/docs/' | absolute_url}}" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
 				View the demo
 			</a>
 		</div>
@@ -50,7 +50,7 @@ hero_html: |
 			<p>A layout used for search result pages and filterable lists.</p>
 		</div>
 		<div class="o-layout-item__footer">
-			<a href="/query/" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
+			<a href="{{'/query/' | absolute_url}}" class="o-layout__unstyled-element o-buttons o-buttons--big o-buttons--primary">
 				View the demo
 			</a>
 		</div>
