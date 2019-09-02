@@ -67,3 +67,34 @@ Example Gemfile:
 gem 'github-pages', group: :jekyll_plugins
 gem 'jekyll-theme-origami', git: 'https://github.com/Financial-Times/jekyll-theme-origami.git'
 ```
+
+Landing Layout frontmatter example:
+
+```yaml
+hero_include: include-name
+hero_html: |
+  <h1>Some HTML</h1>
+hero_muted: false
+```
+
+Documentation Layout frontmatter example:
+
+```yaml
+sidebar_include: include-name
+sidebar_html: |
+  <h1>Some HTML</h1>
+```
+
+Query Layout frontmatter example:
+
+```yaml
+heading_include: include-name
+heading_html: |
+  <h1>Some HTML</h1>
+sidebar_include: include-name
+sidebar_html: |
+  <h1>Some HTML</h1>
+sidebar_aside_include: include-name
+sidebar_aside_html: |
+  <h1>Some HTML</h1>
+```

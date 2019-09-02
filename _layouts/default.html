@@ -21,10 +21,10 @@
 		These are imported as partials so that they can be
 		individually overridden by another site
 	{% endcomment %}
-	{% include layout/cuts-the-mustard.html %}
-	{% include layout/favicons.html %}
-	{% include layout/styles.html %}
-	{% include layout/scripts.html %}
+	{% include page-head/cuts-the-mustard.html %}
+	{% include page-head/favicons.html %}
+	{% include page-head/styles.html %}
+	{% include page-head/scripts.html %}
 
 	{% comment %}
 		Sitemap and canonical URL links
@@ -36,7 +36,7 @@
 		Empty template used to specify additional content for
 		the page head
 	{% endcomment %}
-	{% include layout/head.html %}
+	{% include page-head/extra.html %}
 
 </head>
 <body>
