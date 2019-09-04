@@ -1,9 +1,9 @@
 ---
-title: Landing Layout - Origami Jekyll Demo
+title: Landing Layout
 permalink: /landing/
-layout: origami-theme-landing
+layout: origami-theme/landing
 hero:
-  content_include: demo/hero-landing.html
+  content_include: origami-theme-demo/hero-landing.html
 ---
 
 ## Demo Landing Layout

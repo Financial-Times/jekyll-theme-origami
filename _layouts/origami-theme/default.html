@@ -31,10 +31,10 @@
 		These are imported as partials so that they can be
 		individually overridden by another site
 	{% endcomment %}
-	{% include page-head/cuts-the-mustard.html %}
-	{% include page-head/favicons.html %}
-	{% include page-head/styles.html %}
-	{% include page-head/scripts.html %}
+	{% include origami-theme/head/cuts-the-mustard.html %}
+	{% include origami-theme/head/favicons.html %}
+	{% include origami-theme/head/styles.html %}
+	{% include origami-theme/head/scripts.html %}
 
 	{% comment %}
 		Sitemap and canonical URL links
@@ -46,7 +46,7 @@
 		Empty template used to specify additional content for
 		the page head
 	{% endcomment %}
-	{% include page-head/extra.html %}
+	{% include origami-theme/head/extra.html %}
 
 </head>
 <body>
@@ -67,11 +67,11 @@
 		{% endif %}
 	>
 
-		<div class="o-layout__header">{% include origami-theme-header.html %}</div>
+		<div class="o-layout__header">{% include origami-theme/header.html %}</div>
 
 		{{content}}
 
-		<div class="o-layout__footer">{% include origami-theme-footer.html %}</div>
+		<div class="o-layout__footer">{% include origami-theme/footer.html %}</div>
 
 	</div>
 
