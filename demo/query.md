@@ -1,13 +1,13 @@
 ---
 title: Query Layout - Origami Jekyll Demo
 permalink: /query/
-layout: origami-theme-query
+layout: origami-theme/query
 heading:
-  content_include: demo/heading-query.html
+  content_include: origami-theme-demo/heading-query.html
 sidebar:
-  content_include: demo/sidebar-query.html
+  content_include: origami-theme-demo/sidebar-query.html
 aside:
-  content_include: demo/aside-query.html
+  content_include: origami-theme-demo/aside-query.html
 ---
 
 ## Hello World!

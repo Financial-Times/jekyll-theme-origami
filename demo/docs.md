@@ -1,7 +1,7 @@
 ---
 title: Documentation Layout - Origami Jekyll Demo
 permalink: /docs/
-layout: origami-theme-documentation
+layout: origami-theme/documentation
 ---
 
 # Demo Documentation Layout

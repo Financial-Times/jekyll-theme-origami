@@ -1,9 +1,9 @@
 ---
 title: Origami Jekyll Demo
 permalink: /
-layout: origami-theme-landing
+layout: origami-theme/landing
 hero:
-  content_include: demo/hero-home.html
+  content_include: origami-theme-demo/hero-home.html
   image_url: https://www.ft.com/__origami/service/image/v2/images/raw/ftcms:c5562daa-2a79-11e9-88a4-c32129756dd8?source=jekyll-theme-origami
 ---
 
